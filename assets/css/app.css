@@ -1,0 +1,93 @@
+
+:root{
+  --cq-primary:#5B5FEF;
+  --cq-primary-dark:#4549C9;
+  --cq-accent:#20C7D9;
+  --cq-ink:#17203A;
+  --cq-muted:#6F7890;
+  --cq-bg:#F6F8FC;
+  --cq-card:#FFFFFF;
+  --cq-border:#E7EAF2;
+  --cq-success:#17A673;
+  --cq-warning:#F0A126;
+  --cq-danger:#E65262;
+  --cq-shadow:0 18px 50px rgba(23,32,58,.10);
+}
+*{box-sizing:border-box}
+body{
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--cq-ink);
+  background:var(--cq-bg);
+}
+a{text-decoration:none}
+.navbar{background:rgba(255,255,255,.92)!important;backdrop-filter:blur(14px);border-bottom:1px solid var(--cq-border)}
+.navbar-brand img{width:152px;height:auto}
+.nav-link{font-weight:600;color:#566078!important}
+.nav-link:hover{color:var(--cq-primary)!important}
+.btn-primary{
+  --bs-btn-bg:var(--cq-primary);
+  --bs-btn-border-color:var(--cq-primary);
+  --bs-btn-hover-bg:var(--cq-primary-dark);
+  --bs-btn-hover-border-color:var(--cq-primary-dark);
+  border-radius:14px;font-weight:700;padding:.85rem 1.25rem;
+  box-shadow:0 10px 24px rgba(91,95,239,.22);
+}
+.btn-outline-primary{--bs-btn-color:var(--cq-primary);--bs-btn-border-color:#C8CBFF;border-radius:14px;font-weight:700}
+.badge-soft{display:inline-flex;align-items:center;gap:.5rem;background:#EEF0FF;color:var(--cq-primary);padding:.55rem .8rem;border-radius:999px;font-weight:700;font-size:.82rem}
+.hero{padding:5.7rem 0 4rem;overflow:hidden;position:relative}
+.hero:before{content:"";position:absolute;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(32,199,217,.16),rgba(32,199,217,0) 70%);right:-120px;top:-90px}
+.hero h1{font-size:clamp(2.35rem,5vw,4.7rem);line-height:.98;letter-spacing:-.05em;font-weight:850;max-width:900px}
+.hero p{font-size:1.13rem;color:var(--cq-muted);max-width:680px}
+.gradient-text{background:linear-gradient(90deg,var(--cq-primary),var(--cq-accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.card-soft{background:var(--cq-card);border:1px solid var(--cq-border);border-radius:24px;box-shadow:var(--cq-shadow)}
+.metric-card{padding:1.35rem;height:100%}
+.metric-value{font-size:1.9rem;font-weight:850;letter-spacing:-.04em}
+.metric-label{font-size:.83rem;color:var(--cq-muted);font-weight:650}
+.section{padding:4.5rem 0}
+.section-title{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:850;letter-spacing:-.04em}
+.section-sub{color:var(--cq-muted);max-width:720px}
+.feature-icon{width:46px;height:46px;border-radius:15px;background:#EEF0FF;display:grid;place-items:center;color:var(--cq-primary);font-weight:900}
+.feature-card{padding:1.45rem;height:100%;transition:.2s}
+.feature-card:hover{transform:translateY(-4px)}
+.flow-step{position:relative;padding:1.4rem}
+.flow-num{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--cq-primary);color:#fff;font-weight:800}
+.mock-window{border:1px solid var(--cq-border);border-radius:22px;background:#fff;box-shadow:var(--cq-shadow);overflow:hidden}
+.mock-bar{padding:.8rem 1rem;background:#FAFBFD;border-bottom:1px solid var(--cq-border);display:flex;gap:.4rem}
+.mock-dot{width:9px;height:9px;border-radius:50%;background:#D7DBE6}
+.matrix-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;background:#EEF1F8;padding:8px;border-radius:18px}
+.matrix-cell{background:#fff;aspect-ratio:1/1;border-radius:12px;display:grid;place-items:center;font-size:2rem;font-weight:800;border:1px solid #E7EAF2}
+.answer-option{border:2px solid var(--cq-border);border-radius:16px;background:#fff;padding:.9rem;cursor:pointer;transition:.2s;text-align:center;font-size:1.6rem;font-weight:800}
+.answer-option:hover,.answer-option.active{border-color:var(--cq-primary);background:#F3F4FF;transform:translateY(-2px)}
+.progress{height:9px;border-radius:999px;background:#E9ECF4}.progress-bar{background:linear-gradient(90deg,var(--cq-primary),var(--cq-accent))}
+.test-shell{max-width:920px;margin:2rem auto 4rem}
+.test-card{padding:clamp(1.2rem,3vw,2.2rem)}
+.timer-pill{padding:.55rem .85rem;border-radius:999px;background:#F0F2F8;color:#556079;font-weight:800}
+.lock-card{position:relative;overflow:hidden}
+.blur-zone{filter:blur(6px);user-select:none;opacity:.62}
+.lock-overlay{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(rgba(255,255,255,.15),rgba(255,255,255,.72))}
+.price-card{padding:1.6rem}
+.price-card.featured{border:2px solid var(--cq-primary);transform:translateY(-5px)}
+.score-ring{width:180px;height:180px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--cq-primary) 0 78%,#EBEDF5 78%);position:relative}
+.score-ring:before{content:"";position:absolute;width:142px;height:142px;border-radius:50%;background:white}
+.score-ring>div{position:relative;text-align:center}
+.score-ring strong{font-size:2.8rem;display:block;line-height:1}
+.skill-row{margin-bottom:1rem}.skill-row .label{display:flex;justify-content:space-between;font-weight:700;margin-bottom:.45rem}
+.dashboard-card{padding:1.35rem}
+.sidebar{background:#fff;border-right:1px solid var(--cq-border);min-height:100vh;position:sticky;top:0}
+.side-link{display:flex;align-items:center;gap:.7rem;padding:.8rem 1rem;border-radius:12px;color:#5B647A;font-weight:700}
+.side-link.active,.side-link:hover{background:#EEF0FF;color:var(--cq-primary)}
+.checkout-panel{padding:1.5rem}
+.pay-option{border:1px solid var(--cq-border);padding:1rem;border-radius:16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem;background:#fff}
+.notice{background:#FFF8E9;border:1px solid #F4DFB0;border-radius:16px;padding:1rem;color:#7A5B1B}
+.footer{padding:2.5rem 0;color:#788198;font-size:.9rem}
+.small-kicker{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:850;color:var(--cq-primary)}
+@media(max-width:991px){
+  .hero{padding-top:4rem}
+  .sidebar{min-height:auto;position:relative;border-right:0;border-bottom:1px solid var(--cq-border)}
+}
+@media(max-width:576px){
+  .hero h1{font-size:2.55rem}
+  .section{padding:3.2rem 0}
+  .matrix-cell{font-size:1.45rem}
+  .answer-option{font-size:1.3rem}
+}
